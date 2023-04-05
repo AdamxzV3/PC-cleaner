@@ -152,10 +152,6 @@ goto start
 :3
 @echo off
 
-:: Create System Restore Point
-echo Creating System Restore Point...
-wmic /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "PC Cleaner Tool Restore Point", 100, 7
-echo.
 
 :: Find and Remove Duplicate Files
 echo Finding Duplicate Files...
