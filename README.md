@@ -12,9 +12,12 @@ The PC Cleaner Tool includes support for cleaning up the cache and browsing hist
 - 🎭 Opera Browser
 
 
-## Features
-System Information - This option will display information about the user's computer.🖥️
-Virus and Malware Scanner - This option will scan the user's computer for viruses and malware.🛡️
+## 🛠️ Features
+- 🧹 System Cleanup - This option will clean up temporary files, prefetch files, printer cache, and other unimportant files. 
+- 🌐🧹 Browser Cleaner - This option will clean up browser data, cache, and history for Microsoft Edge, Google Chrome, Brave, and Opera. 
+- ⚙️🚀 System Optimization and Maintenance - This option will create a system restore point, delete folders with the same names, and perform other system optimization tasks.
+- 💻ℹ️ System Information - This option will display information about the user's computer.
+- 🛡️🦠 Virus and Malware Scanner - This option will scan the user's computer for viruses and malware.
 
 
 
