@@ -11,6 +11,13 @@ The PC Cleaner Tool includes support for cleaning up the cache and browsing hist
 - 🦁 Brave Browser
 - 🎭 Opera Browser
 
+
+## Features
+System Information - This option will display information about the user's computer.🖥️
+Virus and Malware Scanner - This option will scan the user's computer for viruses and malware.🛡️
+
+
+
 ## 🗑️ File Deletion
 
 In addition to browser cleaning, the PC Cleaner Tool also deletes a variety of other unneeded files, including:
