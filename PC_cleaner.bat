@@ -1,6 +1,6 @@
 
 @echo off
-Set PcCleanerVersion=1.0.0
+Set PcCleanerVersion=1.1.0
 title Pc Cleaner
 color 9
 echo Pc cleaner by CodePulse
