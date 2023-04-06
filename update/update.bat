@@ -1,6 +1,6 @@
 @echo off
 
-setlocal
+setlocal EnableDelayedExpansion
 
 rem Check for updates
 curl -s https://raw.githubusercontent.com/AdamxzV3/PC-cleaner/main/version.txt > version.txt
