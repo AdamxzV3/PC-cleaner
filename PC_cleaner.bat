@@ -229,27 +229,29 @@ goto start
 :5
 @echo off
 
-echo Starting malware and virus scan...
+@echo off
+echo Scanning your PC with Windows Defender...
+echo This may take a few minutes.
 
-:: Perform a full system scan using Windows Defender
-for /f "tokens=* delims=" %%a in ('powershell.exe -Command "Start-MpScan -ScanType FullScan -ScanParameter -DisableRemediation"') do set "ScanResult=%%a"
+REM Run a quick scan with Windows Defender
+"%ProgramFiles%\Windows Defender\MpCmdRun.exe" /ScanQuick
 
-:: Check the scan results
-set "ScanType="
-set "ScanStatus="
-set "ThreatsDetected="
-for /f "tokens=1,2 delims=: " %%a in ("%ScanResult%") do (
-    if "%%a"=="ScanType" set "ScanType=%%b"
-    if "%%a"=="ScanStatus" set "ScanStatus=%%b"
-    if "%%a"=="ThreatsDetected" set "ThreatsDetected=%%b"
+REM Check the result of the scan
+set result=%errorlevel%
+
+if %result% == 0 (
+    echo No threats found.
+) else if %result% == 1 (
+    echo Windows Defender found and removed some threats.
+) else if %result% == 2 (
+    echo Windows Defender found some threats, but couldn't remove them all.
+) else if %result% == 3 (
+    echo Windows Defender was unable to complete the scan.
+) else (
+    echo An unknown error occurred during the scan.
 )
 
-:: Display the scan results
-echo Scan type: %ScanType%
-echo Scan status: %ScanStatus%
-echo Threats detected: %ThreatsDetected%
-
-echo Malware and virus scan complete.
 pause
+
 cls
 goto start
